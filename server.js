@@ -31,7 +31,7 @@ app.post('/',async (req,res)=>{
     for(let i=0;i<meta.length;i++){
         
 
-        data[`${meta[i].getAttribute("property")}`] = '${meta[i].getAttribute("content")}'
+        data[`${meta[i].getAttribute("property")}`] = `${meta[i].getAttribute("content")}`
 
     }
 
