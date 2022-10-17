@@ -35,7 +35,6 @@ app.post('/',async (req,res)=>{
 
     }
 
-    console.log(data)
 
     res.json(data)
 
