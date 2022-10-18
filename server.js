@@ -8,12 +8,7 @@ if(process.env.NODE_ENV!=="production"){
     const dotenv = require('dotenv')
     
     dotenv.config()
-    
-    console.log(process.env.NODE_ENV)
 
-}
-else{
-    console.log(process.env.NODE_ENV)
 }
 
 
@@ -27,8 +22,11 @@ app.use(express.urlencoded({ extended : true }))
 
 
 
-app.post('/',async (req,res)=>{
+app.post('/:apikey',async (req,res)=>{
 
+    const apikey = req.params.apikey
+
+    if(apikey === process.env.APIKEY){
 
     let url = req.body.url
 
@@ -49,6 +47,10 @@ app.post('/',async (req,res)=>{
     res.json(data)
 
 
+    } else{
+
+        res.status(404).send('Invalid API Key');
+    }
 
 })
 
