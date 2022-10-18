@@ -30,10 +30,15 @@ app.get('/',(req,res)=>{
 
     res.send("do post request using api key")
 
+    console.log("got GET request")
+
 })
 
 
 app.post('/:apikey', async (req, res) => {
+
+
+    console.log("got POST request")
 
     const apikey = req.params.apikey
 
