@@ -3,9 +3,19 @@ import axios from "axios"
 
 import {parse} from "node-html-parser"
 
-import dotenv from 'dotenv'
+if(process.env.NODE_ENV!=="production"){
 
-dotenv.config()
+    const dotenv = require('dotenv')
+    
+    dotenv.config()
+    
+    console.log(process.env.NODE_ENV)
+
+}
+else{
+    console.log(process.env.NODE_ENV)
+}
+
 
 const app = express()
 const port = process.env.PORT
