@@ -26,7 +26,11 @@ app.post('/:apikey',async (req,res)=>{
 
     const apikey = req.params.apikey
 
+    console.log(`api key is :${apikey}`)
+    console.log(`${process.env.APIKEY}`)
     if(apikey === process.env.APIKEY){
+
+
 
     let url = req.body.url
 
@@ -39,7 +43,7 @@ app.post('/:apikey',async (req,res)=>{
     for(let i=0;i<meta.length;i++){
         
 
-        data[`${meta[i].getAttribute("property")}`] = `${meta[i].getAttribute("content")}`
+        data[`${meta[i].getAttribute("property").replace("og:","")}`] = `${meta[i].getAttribute("content")}`
 
     }
 
