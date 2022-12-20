@@ -6,6 +6,7 @@ import { parse } from "node-html-parser"
 //below two lines of code is for using both import and require
 import { createRequire } from "module";
 const require = createRequire(import.meta.url);
+const cors = require('cors')
 
 
 if (process.env.NODE_ENV !== "production") {
@@ -21,6 +22,9 @@ const app = express()
 const port = process.env.PORT
 
 
+app.use(cors({
+    origin:"*"
+}))
 
 app.use(express.urlencoded({ extended: true }))
 
