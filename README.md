@@ -1,11 +1,10 @@
-
-# meta-tags-api
+# Website Info Extractor
 
 Extract essential information from any website with ease!
 
 ## About
 
-meta-tags-api is a Node.js API that empowers you to seamlessly extract valuable metadata from websites, including :
+website info extractor is a Node.js API that empowers you to seamlessly extract valuable metadata from websites, including :
 
 `Title`
 `Description`
@@ -47,7 +46,7 @@ Replace `<your_port>` and `<your_api_key>` with your desired port number and API
 
 ### Optional : 
 
-You can also set the proxy environment variables through which your meta-tags-api can send the request to the appropriate website for getting the metadata.you can set the proxy by adding these two environment variables : 
+You can also set the proxy environment variables through which your Website Info Extractor can send the request to the appropriate website for getting the metadata.you can set the proxy by adding these two environment variables : 
 
 ```
 PROXYPORT=<Your_Proxy_Server_Port_Number>
